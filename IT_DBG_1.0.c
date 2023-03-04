@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "pico/stdlib.h"
 #include <string.h>
-
+#include "motor.h"
 
 int main()
 {
@@ -14,6 +14,13 @@ int main()
     char UserInput;
     //sleep_ms(5000);
     int n = 0;
+    struct motor MotorA;
+
+    MotorA.pin1 = 20;
+    MotorA.pin1 = 21;
+    MotorA.pin1 = 22;
+    MotorA.pin1 = 23;
+
     while(1)
     {
         while ((UserInput != '\n') && (n < 80))

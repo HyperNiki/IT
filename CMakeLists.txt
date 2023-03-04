@@ -23,6 +23,8 @@ project(IT_DBG_1.0 C CXX ASM)
 # Initialise the Raspberry Pi Pico SDK
 pico_sdk_init()
 
+add_subdirectory(motor)
+
 # Add executable. Default name is the project name, version 0.1
 
 add_executable(IT_DBG_1.0 IT_DBG_1.0.c )
@@ -45,6 +47,7 @@ target_include_directories(IT_DBG_1.0 PRIVATE
 
 # Add any user requested libraries
 target_link_libraries(IT_DBG_1.0
+	motor
         )
 
 pico_add_extra_outputs(IT_DBG_1.0)
